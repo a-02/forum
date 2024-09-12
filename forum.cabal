@@ -1,0 +1,64 @@
+cabal-version:      3.0
+name:               forum
+version:            0.0.0
+-- synopsis:
+-- description:
+license:            BSD-2-Clause
+
+license-file:       LICENSE
+
+author:             nks
+
+maintainer:         nks@9k.vc
+
+category:           Web
+build-type:         Simple
+
+extra-doc-files:    CHANGELOG.md
+
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall
+
+library
+  default-language: GHC2021
+  exposed-modules:
+    Application
+    Foundation
+    Home
+  other-modules:
+    Paths_forum
+  hs-source-dirs:
+    src
+  build-depends:
+      base ^>=4.17.2.1,
+      classy-prelude-yesod,
+      esqueleto,
+      yesod-auth,
+      yesod-auth-hashdb,
+      yesod-core,
+      yesod-form
+    
+
+executable forum
+    import:           warnings
+
+    main-is:          Main.hs
+
+    -- other-modules:
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    -- other-extensions:
+
+    build-depends:    
+      base ^>=4.17.2.1,
+      forum,
+      classy-prelude-yesod,
+      esqueleto,
+      yesod-auth,
+      yesod-auth-hashdb,
+      yesod-core,
+      yesod-form
+
+    hs-source-dirs:   app
+    default-language: GHC2021
