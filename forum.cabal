@@ -1,6 +1,6 @@
 cabal-version:      3.0
 name:               forum
-version:            0.0.0
+version:            0.0.1
 -- synopsis:
 -- description:
 license:            BSD-2-Clause
@@ -27,6 +27,7 @@ library
     Application
     Foundation
     Home
+    Settings
   other-modules:
     Paths_forum
   hs-source-dirs:
@@ -38,7 +39,13 @@ library
       yesod-auth,
       yesod-auth-hashdb,
       yesod-core,
-      yesod-form
+      yesod-form,
+      yesod-static,
+      http-client,
+      persistent-postgresql,
+      warp,
+      template-haskell,
+      monad-logger
     
 
 executable forum
@@ -58,7 +65,13 @@ executable forum
       yesod-auth,
       yesod-auth-hashdb,
       yesod-core,
-      yesod-form
+      yesod-form,
+      yesod-static,
+      http-client,
+      persistent-postgresql,
+      warp,
+      template-haskell,
+      monad-logger
 
     hs-source-dirs:   app
     default-language: GHC2021
