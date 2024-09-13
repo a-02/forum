@@ -45,7 +45,13 @@ library
       persistent-postgresql,
       warp,
       template-haskell,
-      monad-logger
+      monad-logger,
+      http-client-tls,
+      fast-logger,
+      yesod,
+      aeson,
+      file-embed,
+      yaml
     
 
 executable forum
@@ -71,7 +77,13 @@ executable forum
       persistent-postgresql,
       warp,
       template-haskell,
-      monad-logger
+      monad-logger,
+      http-client-tls,
+      fast-logger,
+      yesod,
+      aeson,
+      file-embed,
+      yaml
 
     hs-source-dirs:   app
     default-language: GHC2021

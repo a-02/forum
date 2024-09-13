@@ -8,3 +8,9 @@
 ### 0.0.1 -- 09-12-2024 4:31pm
 * taking a nap
 * up to the 2nd part of the walkthrough
+
+### 0.0.2 -- 09-12-2024 11:24pm
+* makeFoundation added
+* yaml parsing
+* database settings
+* yet more gosh dang scaffolding

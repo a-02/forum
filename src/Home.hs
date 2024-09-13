@@ -10,5 +10,5 @@ getHomeR =
     defaultLayout $ do
         setTitle "Nice"
         [whamlet|
-            <h4> Nice.
+            <h4> We did it.
         |]
