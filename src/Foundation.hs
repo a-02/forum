@@ -37,6 +37,7 @@ type Form a = Html -> MForm (HandlerFor App) (FormResult a, Widget)
 
 
 instance Yesod App where
+    -- everything gets checked out by the middleware first. this is the default
     yesodMiddleware = defaultYesodMiddleware
     defaultLayout :: WidgetFor App () -> HandlerFor App Html
     defaultLayout widget = do

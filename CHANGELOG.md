@@ -19,3 +19,8 @@
 * back to work, remembering what everything does
 * added 404 handling
 * added templates, hamlet wrapper
+
+### 0.0.4 -- 09-25-2024 11:58am
+* here we depart from the walkthrough more or less
+* added a simple model for webcomic pages
+* now is the time to buckle down on the "web design" portion

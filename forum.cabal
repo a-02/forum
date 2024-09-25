@@ -1,6 +1,6 @@
 cabal-version:      3.0
 name:               forum
-version:            0.0.1
+version:            0.0.4
 -- synopsis:
 -- description:
 license:            BSD-2-Clause
@@ -28,6 +28,7 @@ library
     Foundation
     Home
     Settings
+    Model
   other-modules:
     Paths_forum
   hs-source-dirs:
@@ -42,6 +43,7 @@ library
       yesod-form,
       yesod-static,
       http-client,
+      persistent,
       persistent-postgresql,
       warp,
       template-haskell,
@@ -75,6 +77,7 @@ executable forum
       yesod-form,
       yesod-static,
       http-client,
+      persistent,
       persistent-postgresql,
       warp,
       template-haskell,
