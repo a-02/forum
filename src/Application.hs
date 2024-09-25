@@ -12,7 +12,7 @@ import Network.HTTP.Client.TLS
 import System.Log.FastLogger
 import Home
 import Settings
-import Network.Wai.Handler.Warp
+import Network.Wai.Handler.Warp as Warp
 import Control.Monad (when)
 import Control.Monad.Logger
 import Language.Haskell.TH.Syntax
@@ -21,7 +21,7 @@ import Yesod.Default.Config2
 
 mkYesodDispatch "App" resourcesApp
 
-warpSettings :: App -> Settings
+warpSettings :: App -> Warp.Settings
 warpSettings app =
     setPort (appPort $ appSettings app) $
     setHost (appHost $ appSettings app) $

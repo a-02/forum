@@ -14,3 +14,8 @@
 * yaml parsing
 * database settings
 * yet more gosh dang scaffolding
+
+### 0.0.3 -- 09-24-2024 7:36pm
+* back to work, remembering what everything does
+* added 404 handling
+* added templates, hamlet wrapper

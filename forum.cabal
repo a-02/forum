@@ -51,7 +51,8 @@ library
       yesod,
       aeson,
       file-embed,
-      yaml
+      yaml,
+      shakespeare
     
 
 executable forum
@@ -83,7 +84,8 @@ executable forum
       yesod,
       aeson,
       file-embed,
-      yaml
+      yaml,
+      shakespeare
 
     hs-source-dirs:   app
     default-language: GHC2021
