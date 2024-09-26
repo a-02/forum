@@ -24,3 +24,9 @@
 * here we depart from the walkthrough more or less
 * added a simple model for webcomic pages
 * now is the time to buckle down on the "web design" portion
+
+### 0.0.5 -- 09-25-2024 9:34pm
+* learned all about the sun
+* apparently a lot of math goes into sunset and sunrise times
+* added Sun
+* oh also i got a migraine
