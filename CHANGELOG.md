@@ -30,3 +30,7 @@
 * apparently a lot of math goes into sunset and sunrise times
 * added Sun
 * oh also i got a migraine
+
+### 0.0.6 -- 09-26-2024 00:00pm
+* converting decimal (0,1) to a time of day!
+* the sun stuff doesnt really work im gonna have to redo it all
