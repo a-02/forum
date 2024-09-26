@@ -31,6 +31,15 @@
 * added Sun
 * oh also i got a migraine
 
-### 0.0.6 -- 09-26-2024 00:00pm
+### 0.0.6 -- 09-26-2024 10:50am
 * converting decimal (0,1) to a time of day!
 * the sun stuff doesnt really work im gonna have to redo it all
+* but i did figure out CPS kinda
+
+### 0.0.7 -- 09-26-2024 1:49pm
+* calcSun functions, but spits out the wrong answer.
+* i will not touch it further. it will be used in its current state
+* think of it like a piece of art, its busted on purpose
+* todo: just pretend the sun rises at 6am and sets at 6pm every day
+* make some fun lil color thing based on if its after or before the broken calcSun clock
+* 4 different background colors. itd be fun!

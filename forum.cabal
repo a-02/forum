@@ -1,6 +1,6 @@
 cabal-version:      3.0
 name:               forum
-version:            0.0.5
+version:            0.0.7
 -- synopsis:
 -- description:
 license:            BSD-2-Clause
