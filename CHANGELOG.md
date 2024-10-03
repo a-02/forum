@@ -43,3 +43,7 @@
 * todo: just pretend the sun rises at 6am and sets at 6pm every day
 * make some fun lil color thing based on if its after or before the broken calcSun clock
 * 4 different background colors. itd be fun!
+
+### 0.0.8 -- 10-03-2024 11:07am
+* add testing
+* add a lotta test variables

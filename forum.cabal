@@ -1,6 +1,6 @@
 cabal-version:      3.0
 name:               forum
-version:            0.0.7
+version:            0.0.8
 -- synopsis:
 -- description:
 license:            BSD-2-Clause
@@ -56,8 +56,7 @@ library
       file-embed,
       yaml,
       shakespeare,
-      time
-    
+      thyme,
 
 executable forum
     import:           warnings
@@ -91,7 +90,20 @@ executable forum
       file-embed,
       yaml,
       shakespeare,
-      time
+      thyme,
+      tasty,
+      tasty-hunit
 
     hs-source-dirs:   app
     default-language: GHC2021
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: TestMain.hs
+  build-depends:
+    base,
+    tasty,
+    tasty-hunit,
+    thyme
+  hs-source-dirs: test
+  default-language: GHC2021
