@@ -2,7 +2,8 @@
 {-# HLINT ignore "Redundant lambda" #-}
 module Astronomy where
 
-import Data.Time
+import Data.Thyme
+import Control.Lens
 import Data.Fixed
 import Data.Ratio
 
@@ -19,6 +20,7 @@ data Sun = Sun {
   rising :: Double,
   setting :: Double
 } deriving (Show)
+
 
 
 toSec :: Double -> ((Int -> r) -> r)

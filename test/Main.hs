@@ -1,5 +1,8 @@
-module TestMain where
+{-# LANGUAGE ViewPatterns #-}
+module Main where
 
+import Data.Thyme
+import Control.Lens
 import Test.Tasty
 import Test.Tasty.HUnit
 import Test.Tasty.Ingredients.Basic (testsNames)
@@ -20,7 +23,15 @@ longitudeChi = -87.65
 timeZone :: Double
 timeZone = -6.0
 testDate :: Double
-testDate = 2454686.75 -- Aug. 8th, 2008, 12:06AM
+testDate = 2454686.75 -- Aug. 8th, 2008, 6:00PM (local time)
+
+toJulianDate :: UTCTime -> Double
+toJulianDate (view utcTime -> UTCView day dt) =
+  fromIntegral (toModifiedJulianDay day) + toSeconds dt / 86400 + 2400000 + (timeZone / 24)
+
+testTime :: Double
+testTime = mkUTCTime 2008 8 9 0 6 0 & toJulianDate
+
 testCentury :: Double
 testCentury = 0.08601654 -- (testDate - 24515445)/36525
 -- testGeomMeanLongSun =

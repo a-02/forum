@@ -3,7 +3,7 @@
 ### 0.0.0 -- 09-12-2024
 * added packages
 * got back in the groove of things
-* added Main, Application, Foundation, Home, routes 
+* added Main, Application, Foundation, Home, routes
 
 ### 0.0.1 -- 09-12-2024 4:31pm
 * taking a nap
@@ -47,3 +47,6 @@
 ### 0.0.8 -- 10-03-2024 11:07am
 * add testing
 * add a lotta test variables
+
+### 0.0.9 -- 10-06-2024 12:02am
+* static-ls kinda sucks to setup

@@ -19,9 +19,10 @@ extra-doc-files:    CHANGELOG.md
 -- extra-source-files:
 
 common warnings
-    ghc-options: -Wall
+    ghc-options: -Wall -fwrite-ide-info -hiedir .hiefiles
 
 library
+  import: warnings
   default-language: GHC2021
   exposed-modules:
     Application
@@ -35,7 +36,7 @@ library
   hs-source-dirs:
     src
   build-depends:
-      base ^>=4.17.2.1,
+      base,
       classy-prelude-yesod,
       esqueleto,
       yesod-auth,
@@ -57,6 +58,7 @@ library
       yaml,
       shakespeare,
       thyme,
+      lens
 
 executable forum
     import:           warnings
@@ -64,11 +66,11 @@ executable forum
     main-is:          Main.hs
 
     -- other-modules:
-    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N -fdefer-type-errors -Werror=deferred-type-errors -Werror=deferred-out-of-scope-variables -fno-defer-typed-holes
     -- other-extensions:
 
-    build-depends:    
-      base ^>=4.17.2.1,
+    build-depends:
+      base,
       forum,
       classy-prelude-yesod,
       esqueleto,
@@ -92,18 +94,21 @@ executable forum
       shakespeare,
       thyme,
       tasty,
-      tasty-hunit
+      tasty-hunit,
+      lens
 
     hs-source-dirs:   app
     default-language: GHC2021
 
 test-suite test
+  import: warnings
   type: exitcode-stdio-1.0
-  main-is: TestMain.hs
+  main-is: Main.hs
   build-depends:
     base,
     tasty,
     tasty-hunit,
-    thyme
+    thyme,
+    lens
   hs-source-dirs: test
   default-language: GHC2021
